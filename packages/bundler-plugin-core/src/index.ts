@@ -700,7 +700,7 @@ export function createComponentNameAnnotateHooks() {
 }
 
 export function getDebugIdSnippet(debugId: string): string {
-  return `;!function(){try{var e="undefined"!=typeof window?window:"undefined"!=typeof global?global:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&(e._sentryDebugIds=e._sentryDebugIds||{},e._sentryDebugIds[n]="${debugId}",e._sentryDebugIdIdentifier="sentry-dbid-${debugId}")}catch(e){}}();`;
+  return `;!function(){try{var e=globalThis,n=(new e.Error).stack;n&&(e._sentryDebugIds=e._sentryDebugIds||{},e._sentryDebugIds[n]="${debugId}",e._sentryDebugIdIdentifier="sentry-dbid-${debugId}")}catch(e){}}();`;
 }
 
 export { stringToUUID, replaceBooleanFlagsInCode } from "./utils";

@@ -1,12 +1,5 @@
 try {
-  var globalObject =
-    "undefined" != typeof window
-      ? window
-      : "undefined" != typeof global
-      ? global
-      : "undefined" != typeof self
-      ? self
-      : {};
+  var globalObject = globalThis;
 
   var stack = new globalObject.Error().stack;
 

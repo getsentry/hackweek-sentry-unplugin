@@ -221,14 +221,7 @@ describe("generateModuleMetadataInjectorCode", () => {
     const generatedCode = generateModuleMetadataInjectorCode({});
     expect(generatedCode).toMatchInlineSnapshot(`
       "{
-        var _sentryModuleMetadataGlobal =
-          typeof window !== \\"undefined\\"
-            ? window
-            : typeof global !== \\"undefined\\"
-            ? global
-            : typeof self !== \\"undefined\\"
-            ? self
-            : {};
+        var _sentryModuleMetadataGlobal = globalThis;
 
         _sentryModuleMetadataGlobal._sentryModuleMetadata =
           _sentryModuleMetadataGlobal._sentryModuleMetadata || {};
@@ -254,14 +247,7 @@ describe("generateModuleMetadataInjectorCode", () => {
     });
     expect(generatedCode).toMatchInlineSnapshot(`
       "{
-        var _sentryModuleMetadataGlobal =
-          typeof window !== \\"undefined\\"
-            ? window
-            : typeof global !== \\"undefined\\"
-            ? global
-            : typeof self !== \\"undefined\\"
-            ? self
-            : {};
+        var _sentryModuleMetadataGlobal = globalThis;
 
         _sentryModuleMetadataGlobal._sentryModuleMetadata =
           _sentryModuleMetadataGlobal._sentryModuleMetadata || {};
