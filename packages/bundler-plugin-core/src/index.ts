@@ -255,7 +255,7 @@ export function sentryUnpluginFactory({
         bundleSizeOptimizations.excludePerformanceMonitoring ||
         bundleSizeOptimizations.excludeTracing
       ) {
-        replacementValues["__SENTRY_TRACE__"] = false;
+        replacementValues["__SENTRY_TRACING__"] = false;
       }
       if (bundleSizeOptimizations.excludeReplayCanvas) {
         replacementValues["__RRWEB_EXCLUDE_CANVAS__"] = true;

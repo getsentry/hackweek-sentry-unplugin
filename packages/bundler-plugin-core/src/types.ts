@@ -502,7 +502,7 @@ export type IncludeEntry = {
 
 export interface SentrySDKBuildFlags extends Record<string, boolean | undefined> {
   __SENTRY_DEBUG__?: boolean;
-  __SENTRY_TRACE__?: boolean;
+  __SENTRY_TRACING__?: boolean;
   __RRWEB_EXCLUDE_CANVAS__?: boolean;
   __RRWEB_EXCLUDE_IFRAME__?: boolean;
   __RRWEB_EXCLUDE_SHADOW_DOM__?: boolean;
